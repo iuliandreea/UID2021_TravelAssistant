@@ -1,9 +1,11 @@
 package com.example.travelassistant
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
 
 // TODO: Rename parameter arguments, choose names that match
@@ -36,6 +38,16 @@ class ExploreFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val views = inflater.inflate(R.layout.fragment_explore, container, false)
+        val findViewById = views.findViewById<Button>(R.id.button2)
+        findViewById?.setOnClickListener(object : View.OnClickListener {
+
+            override fun onClick(view: View?) {
+                val intent = Intent(context, AccommodationActivity::class.java)
+                startActivity(intent)
+            }
+
+        })
+//        // Inflate the layout for this fragment
         return views
     }
 
