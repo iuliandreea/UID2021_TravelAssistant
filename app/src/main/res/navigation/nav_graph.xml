@@ -9,22 +9,72 @@
         android:id="@+id/exploreFragment"
         android:name="com.example.travelassistant.ExploreFragment"
         android:label="fragment_explore"
-        tools:layout="@layout/fragment_explore" />
+        tools:layout="@layout/fragment_explore">
+        <argument
+            android:name="accountId"
+            app:argType="integer"
+            android:defaultValue="-1"/>
+    </fragment>
+    <fragment
+        android:id="@+id/foodFragment"
+        android:name="com.example.travelassistant.food.FoodFragment"
+        android:label="fragment_food"
+        tools:layout="@layout/activity_food" />
+    <fragment
+        android:id="@+id/generateFragment"
+        android:name="com.example.travelassistant.trip_generator.fragments.PresetsFragment"
+        android:label="fragment_generate"
+        tools:layout="@layout/activity_presets" />
     <fragment
         android:id="@+id/tripsFragment"
-        android:name="com.example.travelassistant.TripsFragment"
+        android:name="com.example.travelassistant.my_trips.TripsFragment"
         android:label="fragment_trips"
         tools:layout="@layout/fragment_trips" />
     <fragment
+        android:id="@+id/rateTripFragment"
+        android:name="com.example.travelassistant.rating.RateTripFragment"
+        android:label="fragment_rate_trip"
+        tools:layout="@layout/activity_rate_trip" />
+    <fragment
         android:id="@+id/favouriteFragment"
-        android:name="com.example.travelassistant.favouriteFragment"
+        android:name="com.example.travelassistant.favorites.fragments.FavoritesFragment"
         android:label="fragment_favourite"
-        tools:layout="@layout/fragment_favourite" />
+        tools:layout="@layout/activity_favorites" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.travelassistant.profileFragment"
+        android:name="com.example.travelassistant.profile_management.fragments.ProfileDetailsFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/activity_profile_details" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.travelassistant.profile_management.fragments.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/activity_edit_profile">
+    </fragment>
+    <fragment
+        android:id="@+id/transportFragment"
+        android:name="com.example.travelassistant.transportation.fragments.TransportFragment"
+        android:label="fragment_transport"
+        tools:layout="@layout/activity_transport">
+    </fragment>
+    <fragment
+        android:id="@+id/transportDetailsFragment"
+        android:name="com.example.travelassistant.transportation.fragments.TransportDetailsFragment"
+        android:label="fragment_transport_details"
+        tools:layout="@layout/activity_transport_details">
+    </fragment>
+    <fragment
+        android:id="@+id/presetsFragment"
+        android:name="com.example.travelassistant.trip_generator.fragments.PresetsFragment"
+        android:label="fragment_presets"
+        tools:layout="@layout/activity_presets">
+    </fragment>
+    <fragment
+        android:id="@+id/presetsDetailsFragment"
+        android:name="com.example.travelassistant.trip_generator.fragments.PresetsDetailsFragment"
+        android:label="fragment_presets"
+        tools:layout="@layout/activity_presets_details">
+    </fragment>
 
 
 </navigation>
