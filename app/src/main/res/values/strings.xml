@@ -67,6 +67,7 @@
     <string name="help_str">Help Center</string>
     <string name="about_str">About Us</string>
 
+<<<<<<< HEAD
     <string name="transport_str">Transport</string>
 
     <string name="price_str">Price Range</string>
@@ -81,4 +82,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+=======
+>>>>>>> 535ffeac283573c438dd21cc823e63596d834862
 </resources>

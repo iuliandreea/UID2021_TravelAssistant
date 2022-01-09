@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".profile_management.activities.EditProfileActivity">
+=======
+    tools:context=".profile_management.EditProfileActivity">
+>>>>>>> 535ffeac283573c438dd21cc823e63596d834862
 
     <TextView
         android:id="@+id/textView14"
@@ -29,7 +33,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+<<<<<<< HEAD
         android:id="@+id/imageId"
+=======
+        android:id="@+id/profilePhoto"
+>>>>>>> 535ffeac283573c438dd21cc823e63596d834862
         android:layout_width="109dp"
         android:layout_height="106dp"
         android:layout_marginStart="40dp"
@@ -46,7 +54,11 @@
         android:layout_marginTop="16dp"
         android:text="@string/change_photo_str"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/imageId" />
+=======
+        app:layout_constraintTop_toBottomOf="@+id/profilePhoto" />
+>>>>>>> 535ffeac283573c438dd21cc823e63596d834862
 
     <TextView
         android:id="@+id/displayNameId"
@@ -55,7 +67,11 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="148dp"
         android:text="@string/actual_name_str"
+<<<<<<< HEAD
         app:layout_constraintStart_toEndOf="@+id/imageId"
+=======
+        app:layout_constraintStart_toEndOf="@+id/profilePhoto"
+>>>>>>> 535ffeac283573c438dd21cc823e63596d834862
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -73,6 +89,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
+<<<<<<< HEAD
+=======
+        android:layout_marginTop="12dp"
+>>>>>>> 535ffeac283573c438dd21cc823e63596d834862
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +103,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
+<<<<<<< HEAD
         android:layout_marginTop="15dp"
+=======
+        android:layout_marginTop="28dp"
+>>>>>>> 535ffeac283573c438dd21cc823e63596d834862
         android:text="@string/email_str"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameId" />
@@ -93,6 +117,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
+<<<<<<< HEAD
+=======
+        android:layout_marginTop="12dp"
+>>>>>>> 535ffeac283573c438dd21cc823e63596d834862
         android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +131,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
+<<<<<<< HEAD
         android:layout_marginTop="15dp"
+=======
+        android:layout_marginTop="28dp"
+>>>>>>> 535ffeac283573c438dd21cc823e63596d834862
         android:text="@string/curr_pass_str"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailId" />
@@ -113,6 +145,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
+<<<<<<< HEAD
+=======
+        android:layout_marginTop="16dp"
+>>>>>>> 535ffeac283573c438dd21cc823e63596d834862
         android:ems="10"
         android:inputType="textVisiblePassword"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,7 +159,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
+<<<<<<< HEAD
         android:layout_marginTop="15dp"
+=======
+        android:layout_marginTop="32dp"
+>>>>>>> 535ffeac283573c438dd21cc823e63596d834862
         android:text="@string/new_pass_str"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/currPasswordId" />
@@ -133,6 +173,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
+<<<<<<< HEAD
+=======
+        android:layout_marginTop="16dp"
+>>>>>>> 535ffeac283573c438dd21cc823e63596d834862
         android:ems="10"
         android:inputType="textVisiblePassword"
         app:layout_constraintStart_toStartOf="parent"
@@ -142,8 +186,13 @@
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginStart="36dp"
         android:layout_marginBottom="80dp"
+=======
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="16dp"
+>>>>>>> 535ffeac283573c438dd21cc823e63596d834862
         android:text="@string/save_str"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -153,9 +202,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="36dp"
+<<<<<<< HEAD
         android:layout_marginBottom="80dp"
         android:text="@string/delete_str"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+=======
+        android:layout_marginBottom="16dp"
+        android:text="@string/delete_str"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+>>>>>>> 535ffeac283573c438dd21cc823e63596d834862
 </androidx.constraintlayout.widget.ConstraintLayout>
