@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelAssistant">
         <activity
+            android:name=".AccommodationActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -18,6 +21,45 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".trip_generator.PresetsDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".transportation.activities.TransportDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile_management.activities.ResetPasswordDetalisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".trip_generator.PresetsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".todo.MyTripsDetails"
+            android:exported="false" />
+        <activity
+            android:name=".favorites.FavoritesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".todo.MyTripsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile_management.activities.ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile_management.activities.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile_management.activities.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile_management.activities.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile_management.activities.ProfileDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NavigationBarActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

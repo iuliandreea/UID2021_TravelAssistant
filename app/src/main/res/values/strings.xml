@@ -1,3 +1,85 @@
 <resources>
     <string name="app_name">Travel Assistant</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!--General-->
+    <string name="sign_out_str">Sign Out</string>
+
+    <!--Menu-->
+    <string name="explore_str">Explore</string>
+    <string name="trips_str">My Trips</string>
+    <string name="favorites_str">Favorites</string>
+    <string name="profile_str">Profile</string>
+
+    <!--Sign up-->
+    <string name="sign_up_str">Sign Up</string>
+    <string name="full_name_str">Full Name</string>
+
+    <!--Sign in-->
+    <string name="sign_in_str">Sign In</string>
+    <string name="password_str">Password</string>
+    <string name="forgot_pass_str">Forgot Password?</string>
+
+    <!--Reset password-->
+    <string name="reset_pass_str">Reset Password</string>
+    <string name="reset_1_str">Please specify your email address</string>
+    <string name="reset_2_str">A password reset link will be sent to you shortly</string>
+    <string name="reset_req_str">Send Reset Request</string>
+
+    <string name="confirm_new_pass_str">Confirm New Password</string>
+
+    <!--Edit profile-->
+    <string name="edit_str">Edit profile</string>
+
+    <string name="actual_name_str">Name</string>
+    <string name="change_photo_str">Change Photo</string>
+
+    <string name="name_str">Name</string>
+    <string name="email_str">Email Address</string>
+    <string name="curr_pass_str">Current Password</string>
+    <string name="new_pass_str">New Password</string>
+
+    <string name="save_str">Save Changes</string>
+    <string name="delete_str">Delete Account</string>
+
+    <!--Favorites-->
+    <string name="saved_deals_str">Saved Deals</string>
+
+    <!--My trips-->
+    <string name="visited_str">Visited Places</string>
+    <string name="rate_str">Rate Trip</string>
+
+    <!--Profile details-->
+    <string name="current_trip_str">Current Trip</string>
+    <string name="budged_tracker_str">Budget Tracker</string>
+    <string name="language_str">Language</string>
+    <string name="currency_str">Currency</string>
+    <string name="terms_str">Terms and Conditions</string>
+    <string name="privacy_str">Privacy Policy</string>
+    <string name="help_str">Help Center</string>
+    <string name="about_str">About Us</string>
+
+    <string name="transport_str">Transport</string>
+
+    <string name="price_str">Price Range</string>
+    <string name="your_loc_str">Your Location…</string>
+    <string name="dest_str">Destination…</string>
+
+    <string name="transport_type_str">Transport Type</string>
+    <string name="plane_str">Plane</string>
+    <string name="train_str">Train</string>
+    <string name="bus_str">Bus</string>
+    <string name="car_str">Personal Car</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="back_str">Back</string>
 </resources>
