@@ -46,7 +46,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/change_photo_str"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profilePhoto" />
+        app:layout_constraintTop_toBottomOf="@+id/imageId" />
 
     <TextView
         android:id="@+id/displayNameId"
@@ -55,7 +55,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="148dp"
         android:text="@string/actual_name_str"
-        app:layout_constraintStart_toEndOf="@+id/profilePhoto"
+        app:layout_constraintStart_toEndOf="@+id/imageId"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
