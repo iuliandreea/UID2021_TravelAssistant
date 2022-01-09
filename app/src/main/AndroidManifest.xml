@@ -10,13 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelAssistant">
         <activity
-<<<<<<< HEAD
-            android:name=".WardrobeActivity"
-=======
-            android:name=".AccommodationActivity"
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -26,8 +19,6 @@
             </intent-filter>
         </activity>
         <activity
-<<<<<<< HEAD
-=======
             android:name=".trip_generator.PresetsDetailsActivity"
             android:exported="false" />
         <activity
@@ -64,7 +55,6 @@
             android:name=".profile_management.activities.ProfileDetailsActivity"
             android:exported="false" />
         <activity
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
             android:name=".NavigationBarActivity"
             android:exported="false" />
     </application>

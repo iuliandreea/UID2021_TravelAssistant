@@ -2,25 +2,15 @@ package com.example.travelassistant
 
 import android.app.AlertDialog
 import android.content.DialogInterface
-<<<<<<< HEAD
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-=======
-import android.content.Intent
-import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.View.VISIBLE
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
-<<<<<<< HEAD
 import androidx.navigation.findNavController
-=======
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.Navigation
@@ -28,7 +18,6 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.travelassistant.profile_management.fragments.EditProfileFragment
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -47,80 +36,11 @@ class ExploreFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-<<<<<<< HEAD
-=======
     private lateinit var from: EditText
     private lateinit var to: EditText
 
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-    }
-
-    override fun onCreateView(
-
-<<<<<<< HEAD
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val views = inflater.inflate(R.layout.fragment_explore, container, false)
-        val findViewById = views.findViewById<Button>(R.id.button3)
-
-        findViewById.setOnClickListener {
-            if (validateInput(views)) {
-                views.findNavController().navigate(R.id.wardrobeFragment)
-            }
-        }
-
-        return views
-//        // Inflate the layout for this fragment
-        return views
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ExploreFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ExploreFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
-
-    fun displayErrorMessage(message: String) {
-        val dialogClickListener =
-            DialogInterface.OnClickListener { dialog, which ->
-                when (which) {
-                    DialogInterface.BUTTON_POSITIVE -> {
-                    }
-                    DialogInterface.BUTTON_NEGATIVE -> {
-
-                    }
-                }
-            }
-        println(message)
-        val builder: AlertDialog.Builder = AlertDialog.Builder(context)
-        builder.setMessage(message)
-            .setPositiveButton("OK", dialogClickListener)
-            .show()
-=======
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
-    ): View? {
         val view = inflater.inflate(R.layout.fragment_explore, container, false)
 
         val args: ExploreFragmentArgs by navArgs()
@@ -148,7 +68,6 @@ class ExploreFragment : Fragment() {
             }
         }
 
-
         val accomodationBtn = view.findViewById<Button>(R.id.accommodationButton)
         accomodationBtn.setOnClickListener {
             if (validateInput(view)) {
@@ -156,7 +75,32 @@ class ExploreFragment : Fragment() {
             }
         }
 
+        val wardrobeBtn = view.findViewById<Button>(R.id.wardrobeButton)
+        wardrobeBtn.setOnClickListener {
+            if (validateInput(view)) {
+                view.findNavController().navigate(R.id.wardrobeFragment)
+            }
+        }
+
         return view
+    }
+
+    fun displayErrorMessage(message: String) {
+        val dialogClickListener =
+            DialogInterface.OnClickListener { dialog, which ->
+                when (which) {
+                    DialogInterface.BUTTON_POSITIVE -> {
+                    }
+                    DialogInterface.BUTTON_NEGATIVE -> {
+
+                    }
+                }
+            }
+        println(message)
+        val builder: AlertDialog.Builder = AlertDialog.Builder(context)
+        builder.setMessage(message)
+            .setPositiveButton("OK", dialogClickListener)
+            .show()
     }
 
     private fun validateLocations(view: View): Boolean {
@@ -175,17 +119,12 @@ class ExploreFragment : Fragment() {
         }
 
         return valid
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
     }
 
     fun validateInput(views: View): Boolean {
         val dateStr = views.findViewById<EditText>(R.id.checkIn)
         val dateStr1 = views.findViewById<EditText>(R.id.checkOut)
-<<<<<<< HEAD
-        val destination = views.findViewById<EditText>(R.id.destination)
-=======
         val destination = views.findViewById<EditText>(R.id.destinationId)
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
         val dest = destination.text.toString()
         if (dest.equals("Destination") || dest.trim().equals("")) {
 
@@ -193,9 +132,7 @@ class ExploreFragment : Fragment() {
 
         } else {
 
-<<<<<<< HEAD
             var formatter = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault())
-=======
             /*var formatter = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault())
 >>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
             try {
@@ -240,53 +177,8 @@ class ExploreFragment : Fragment() {
 
             }*/
             return true
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
 
         }
         return false
     }
-<<<<<<< HEAD
-=======
-
-    fun displayErrorMessage(message: String) {
-        val dialogClickListener =
-            DialogInterface.OnClickListener { dialog, which ->
-                when (which) {
-                    DialogInterface.BUTTON_POSITIVE -> {
-                    }
-                    DialogInterface.BUTTON_NEGATIVE -> {
-
-                    }
-                }
-            }
-        println(message)
-        val builder: AlertDialog.Builder = AlertDialog.Builder(context)
-        builder.setMessage(message)
-            .setPositiveButton("OK", dialogClickListener)
-            .show()
-    }
-
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ExploreFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ExploreFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
-
-
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
 }

@@ -1,9 +1,5 @@
 <resources>
     <string name="app_name">Travel Assistant</string>
-<<<<<<< HEAD
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-=======
     <string name="title_activity_main2">MainActivity2</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -86,5 +82,4 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="back_str">Back</string>
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
 </resources>

@@ -7,17 +7,6 @@
     tools:context=".TripsFragment">
 
     <TextView
-<<<<<<< HEAD
-        android:id="@+id/textview_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Trips Fragment"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-=======
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -101,5 +90,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
 </androidx.constraintlayout.widget.ConstraintLayout>

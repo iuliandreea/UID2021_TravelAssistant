@@ -7,19 +7,12 @@
     tools:context=".ExploreFragment">
 
     <EditText
-<<<<<<< HEAD
-        android:id="@+id/destination"
-=======
         android:id="@+id/yourLocationId"
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
         android:layout_width="347dp"
         android:layout_height="41dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
-<<<<<<< HEAD
-        android:text="Destination"
-=======
         android:text="Your Location"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +28,6 @@
         android:inputType="textPersonName"
         android:text="Destination"
         android:textSize="12sp"
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -44,62 +36,19 @@
         android:id="@+id/textView5"
         android:layout_width="78dp"
         android:layout_height="40dp"
-<<<<<<< HEAD
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:text="DateIn"
-=======
         android:layout_marginStart="20dp"
         android:layout_marginTop="68dp"
         android:text="CheckIn"
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/checkIn"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintTop_toBottomOf="@+id/destination" />
-=======
         app:layout_constraintTop_toBottomOf="@+id/yourLocationId" />
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="78dp"
         android:layout_height="40dp"
-<<<<<<< HEAD
-        android:text="DateOut"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/checkOut"
-        app:layout_constraintHorizontal_bias="0.551"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.203" />
-
-    <EditText
-        android:id="@+id/checkIn"
-        android:layout_width="170dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.564"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/destination" />
-
-    <EditText
-        android:id="@+id/checkOut"
-        android:layout_width="170dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.564"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkIn"
-        app:layout_constraintVertical_bias="0.203" />
-=======
         android:layout_marginTop="64dp"
         android:layout_marginEnd="2dp"
         android:text="CheckOut"
@@ -128,7 +77,6 @@
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/yourLocationId" />
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mainConstraint"
@@ -141,68 +89,33 @@
         app:layout_constraintTop_toBottomOf="@+id/checkOut"
         app:layout_constraintVertical_bias="0.744">
 
-<<<<<<< HEAD
+
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="409dp"
             android:layout_height="578dp"
-            android:alpha="0.5"
-            android:src="@drawable/explore_page"
-=======
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="413dp"
-            android:layout_height="611dp"
             android:layout_marginBottom="4dp"
             android:alpha="0.5"
             android:src="@drawable/new_explore"
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-<<<<<<< HEAD
-            app:layout_constraintVertical_bias="0.509" />
-
-
-        <Button
-            android:id="@+id/button1"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="224dp"
-=======
-            app:layout_constraintVertical_bias="0.478" />
-
+            app:layout_constraintVertical_bias="1.0" />
 
         <Button
             android:id="@+id/foodButton"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="280dp"
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
+            android:layout_marginTop="264dp"
             android:background="@color/teal_200"
             android:backgroundTintMode="add"
             android:text="Food"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@+id/imageView4"
-<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="@+id/imageView4" />
-
-
-        <Button
-            android:id="@+id/button2"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="116dp"
-=======
-            app:layout_constraintHorizontal_bias="0.538"
             app:layout_constraintStart_toStartOf="@+id/imageView4"
             app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
@@ -211,40 +124,27 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="196dp"
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
+            android:layout_marginTop="188dp"
             android:background="@color/teal_200"
             android:backgroundTintMode="add"
             android:text="Accommodation"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@+id/imageView4"
-<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.501"
-=======
-            app:layout_constraintHorizontal_bias="0.548"
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
             app:layout_constraintStart_toStartOf="@+id/imageView4"
             app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
         <Button
-<<<<<<< HEAD
-            android:id="@+id/button3"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="428dp"
-=======
             android:id="@+id/transportButton"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="112dp"
+            android:layout_marginTop="96dp"
             android:background="@color/teal_200"
             android:backgroundTintMode="add"
             android:text="Transportation"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@+id/imageView4"
-            app:layout_constraintHorizontal_bias="0.55"
             app:layout_constraintStart_toStartOf="@+id/imageView4"
             app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
@@ -253,128 +153,34 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="456dp"
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
+            android:layout_marginTop="428dp"
             android:background="@color/teal_200"
             android:backgroundTintMode="add"
             android:text="Wardrobe"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@+id/imageView4"
-<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.501"
-=======
-            app:layout_constraintHorizontal_bias="0.532"
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
             app:layout_constraintStart_toStartOf="@+id/imageView4"
             app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
         <Button
-<<<<<<< HEAD
             android:id="@+id/button4"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="328dp"
-=======
-            android:id="@+id/visitButton"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="364dp"
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
+            android:layout_marginTop="340dp"
             android:background="@color/teal_200"
             android:backgroundTintMode="add"
             android:text="Visit"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@+id/imageView4"
-<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.501"
-=======
-            app:layout_constraintHorizontal_bias="0.538"
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
             app:layout_constraintStart_toStartOf="@+id/imageView4"
             app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-<<<<<<< HEAD
-<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--        android:id="@+id/searchAccomLayout"-->
-<!--        android:visibility="invisible"-->
-<!--        android:layout_width="350dp"-->
-<!--        android:layout_height="403dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.524"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="1.0">-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/textView2"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Number of persons:"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.017"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.041" />-->
-
-<!--        <EditText-->
-<!--            android:id="@+id/noOfPersons"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:ems="10"-->
-<!--            android:inputType="number"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.0"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.156" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/textView3"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Max price*:"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.014"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.322" />-->
-
-<!--        <EditText-->
-<!--            android:id="@+id/maxPrice"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:ems="10"-->
-<!--            android:inputType="number"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.0"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.455" />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/accomSearchBtn"-->
-<!--            android:layout_width="180dp"-->
-<!--            android:layout_height="55dp"-->
-<!--            android:text="Search"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.455"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.74" />-->
-
-<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
-=======
     <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
     <!--        android:id="@+id/searchAccomLayout"-->
     <!--        android:visibility="invisible"-->
@@ -450,6 +256,5 @@
     <!--            app:layout_constraintVertical_bias="0.74" />-->
 
     <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
 
 </androidx.constraintlayout.widget.ConstraintLayout>
