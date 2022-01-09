@@ -3,9 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Ana/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_list_item_1.xml" value="0.11458333333333333" />
+        <entry key="..\:/Users/Ana/Dropbox/My PC (DESKTOP-URN5C0M)/Desktop/Folder nou/UID2021_TravelAssistant/app/src/main/res/layout/accommodation_content.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/Ana/Dropbox/My PC (DESKTOP-URN5C0M)/Desktop/Folder nou/UID2021_TravelAssistant/app/src/main/res/layout/activity_accommodation.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/Ana/Dropbox/My PC (DESKTOP-URN5C0M)/Desktop/Folder nou/UID2021_TravelAssistant/app/src/main/res/layout/activity_main.xml" value="0.16302083333333334" />
         <entry key="..\:/Users/Ana/Dropbox/My PC (DESKTOP-URN5C0M)/Desktop/Folder nou/UID2021_TravelAssistant/app/src/main/res/layout/activity_navigation_bar.xml" value="0.13020833333333334" />
-        <entry key="..\:/Users/Ana/Dropbox/My PC (DESKTOP-URN5C0M)/Desktop/Folder nou/UID2021_TravelAssistant/app/src/main/res/layout/fragment_explore.xml" value="0.4" />
+        <entry key="..\:/Users/Ana/Dropbox/My PC (DESKTOP-URN5C0M)/Desktop/Folder nou/UID2021_TravelAssistant/app/src/main/res/layout/activity_visit.xml" value="0.17760416666666667" />
+        <entry key="..\:/Users/Ana/Dropbox/My PC (DESKTOP-URN5C0M)/Desktop/Folder nou/UID2021_TravelAssistant/app/src/main/res/layout/activity_wardrobe.xml" value="0.16458333333333333" />
+        <entry key="..\:/Users/Ana/Dropbox/My PC (DESKTOP-URN5C0M)/Desktop/Folder nou/UID2021_TravelAssistant/app/src/main/res/layout/content_weather.xml" value="0.264" />
+        <entry key="..\:/Users/Ana/Dropbox/My PC (DESKTOP-URN5C0M)/Desktop/Folder nou/UID2021_TravelAssistant/app/src/main/res/layout/fragment_accommodation.xml" value="0.2" />
+        <entry key="..\:/Users/Ana/Dropbox/My PC (DESKTOP-URN5C0M)/Desktop/Folder nou/UID2021_TravelAssistant/app/src/main/res/layout/fragment_explore.xml" value="0.24175824175824176" />
         <entry key="..\:/Users/Ana/Dropbox/My PC (DESKTOP-URN5C0M)/Desktop/Folder nou/UID2021_TravelAssistant/app/src/main/res/layout/fragment_favourite.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/Ana/Dropbox/My PC (DESKTOP-URN5C0M)/Desktop/Folder nou/UID2021_TravelAssistant/app/src/main/res/layout/fragment_trips.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/Ana/Dropbox/My PC (DESKTOP-URN5C0M)/Desktop/Folder nou/UID2021_TravelAssistant/app/src/main/res/menu/bottom_nav.xml" value="0.13020833333333334" />
