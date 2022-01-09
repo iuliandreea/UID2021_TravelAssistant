@@ -63,7 +63,7 @@ class ExploreFragment : Fragment() {
 
         val foodButton: Button = view.findViewById(R.id.foodButton)
         foodButton.setOnClickListener {
-            if (validateLocations(view)) {
+            if (validateInput(view)) {
                 view.findNavController().navigate(R.id.foodFragment)
             }
         }
@@ -112,16 +112,16 @@ class ExploreFragment : Fragment() {
     private fun validateLocations(view: View): Boolean {
         var valid = true
 
-        if (from.text.toString() == "") {
-            from.error = "Cannot be empty"
-            from.requestFocus()
+        if (from.text.toString() == "" || from.text.toString() == "Your Location") {
             valid = false
         }
 
-        if (to.text.toString() == "") {
-            to.error = "Cannot be empty"
-            to.requestFocus()
+        if (to.text.toString() == "" || to.text.toString() == "Destination") {
             valid = false
+        }
+
+        if (!valid) {
+            displayErrorMessage("Invalid Location or Destination!")
         }
 
         return valid

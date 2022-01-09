@@ -75,7 +75,9 @@ class ProfileDetailsFragment : Fragment() {
             }
 
             currentTrip.setOnClickListener {
-                view.findNavController().navigate(R.id.organizationFragment)
+                val bundle = Bundle()
+                bundle.putInt("accountId", accountId)
+                view.findNavController().navigate(R.id.organizationFragment, bundle)
             }
 
             budget.setOnClickListener {

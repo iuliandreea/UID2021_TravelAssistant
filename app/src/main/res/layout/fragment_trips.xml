@@ -6,20 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".TripsFragment">
 
-    <Button
-        android:id="@+id/signOutButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="177dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="36dp"
-        android:backgroundTint="@color/gray"
-        android:text="@string/back_str"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"

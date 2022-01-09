@@ -14,9 +14,13 @@ class FavoritesViewHolder(private val view: View) : RecyclerView.ViewHolder(view
     private var priceId: TextView = view.findViewById(R.id.priceId)
     private var imageId: ImageView = view.findViewById(R.id.imageId)
 
-    fun bindData(data: Trip) {
+    fun bindData(data: Trip, listener: OnItemClickListener) {
         nameId.text = data.name
         priceId.text = (data.price.toString() + " EUR")
         imageId.setImageResource(data.image)
+
+        view.setOnClickListener {
+            listener.onItemClick(view, adapterPosition)
+        }
     }
 }

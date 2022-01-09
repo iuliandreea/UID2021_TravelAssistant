@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -18,6 +20,7 @@ import com.example.travelassistant.favorites.adapters.FavoritesViewAdapter
 import com.example.travelassistant.favorites.favorite.FavoritesList
 import com.example.travelassistant.profile_management.activities.SignInActivity
 import com.example.travelassistant.transportation.adapters.OnItemClickListener
+import com.example.travelassistant.trip_generator.adapters.OnItemLongClickListener
 import com.example.travelassistant.trip_generator.adapters.PresetsViewAdapter
 import com.example.travelassistant.trip_generator.trip.PresetsList
 import com.example.travelassistant.trip_generator.trip.Trip
@@ -46,6 +49,7 @@ class FavoritesFragment : Fragment() {
 
         var recyclerView: RecyclerView = view.findViewById(R.id.favoritesView)
 
+        FavoritesList.setInitialFavorite()
         data = FavoritesList.getFavorites()
         val layoutManager: LinearLayoutManager = LinearLayoutManager(view.context)
         adapter = FavoritesViewAdapter(view.context, data)
@@ -62,7 +66,28 @@ class FavoritesFragment : Fragment() {
             showNotLoggedInDialog(view)
         }
 
+        adapter.setOnItemClickListener(object : OnItemClickListener {
+            override fun onItemClick(view: View, position: Int) {
+                showDialog(view, position)
+            }
+        })
+
         return view
+    }
+
+    private fun showDialog(view: View, position: Int) {
+        val builder = AlertDialog.Builder(view.context)
+        builder.setTitle("Remove to Favorites")
+            .setMessage("Would you like to remove this trip from favorites?")
+            .setPositiveButton("Yes", DialogInterface.OnClickListener { _, _ ->
+                FavoritesList.removeFavorite(position)
+                adapter.notifyDataSetChanged()
+                Toast.makeText(view.context, "Trip removed from favorites", Toast.LENGTH_SHORT).show()
+            })
+            .setNegativeButton("No", DialogInterface.OnClickListener { dialog, _ ->
+                dialog.dismiss()
+            })
+        builder.create().show()
     }
 
     private fun showNotLoggedInDialog(view: View) {

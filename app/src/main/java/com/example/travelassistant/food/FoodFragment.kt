@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.travelassistant.R
@@ -46,16 +48,11 @@ class FoodFragment : Fragment(), View.OnClickListener {
         recyclerView.adapter = restaurantRecyclerViewAdapter
         restaurantRecyclerViewAdapter.notifyDataSetChanged()
 
+        val btn: Button = views.findViewById(R.id.signOutButton)
+        btn.setOnClickListener {
+            views.findNavController().navigate(R.id.exploreFragment)
+        }
 
-        /*
-        var recyclerView: RecyclerView = view.findViewById(R.id.transportView)
-
-        val layoutManager: LinearLayoutManager = LinearLayoutManager(view.context)
-        adapter = TransportViewAdapter(view.context, dataSource)
-
-        recyclerView.layoutManager = layoutManager
-        recyclerView.adapter = adapter
-         */
         return views
     }
 

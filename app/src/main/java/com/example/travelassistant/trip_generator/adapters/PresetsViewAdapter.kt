@@ -22,13 +22,19 @@ class PresetsViewAdapter(private val context: Context,
         mListener = listener
     }
 
+    private lateinit var lListener: OnItemLongClickListener
+
+    fun setOnItemLongClickListener(listener: OnItemLongClickListener) {
+        lListener = listener
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PresetsViewHolder {
         val view = inflater.inflate(viewType, parent, false)
         return PresetsViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: PresetsViewHolder, position: Int) {
-        holder.bindData(dataSource[position], mListener)
+        holder.bindData(dataSource[position], mListener, lListener)
     }
 
     override fun getItemCount(): Int {

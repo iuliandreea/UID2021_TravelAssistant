@@ -15,13 +15,19 @@ class FavoritesViewAdapter(private val context: Context,
     private val inflater: LayoutInflater =
         context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
+    private lateinit var mListener: OnItemClickListener
+
+    fun setOnItemClickListener(listener: OnItemClickListener) {
+        mListener = listener
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoritesViewHolder {
         val view = inflater.inflate(viewType, parent, false)
         return FavoritesViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: FavoritesViewHolder, position: Int) {
-        holder.bindData(dataSource[position])
+        holder.bindData(dataSource[position], mListener)
     }
 
     override fun getItemCount(): Int {

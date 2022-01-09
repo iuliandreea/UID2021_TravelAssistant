@@ -165,7 +165,7 @@ class EditProfileFragment : Fragment() {
         builder.setTitle("Save Changes")
             .setMessage("Are you sure you want to update your account?")
             .setPositiveButton("Confirm", DialogInterface.OnClickListener { _, _ ->
-                // AccountList.setAccount(accountId, Account(email, password, fullName))
+                AccountList.setAccount(accountId, Account(email, password, fullName))
                 Toast.makeText(view.context, "Account updated successfully!", Toast.LENGTH_SHORT).show()
             })
             .setNegativeButton("Cancel", DialogInterface.OnClickListener { dialog, _ ->
@@ -179,7 +179,7 @@ class EditProfileFragment : Fragment() {
         builder.setTitle("Delete Account")
             .setMessage("Are you sure you want to delete your account?")
             .setPositiveButton("Confirm", DialogInterface.OnClickListener { _, _ ->
-                // AccountList.removeAccount(accountId)
+                AccountList.removeAccount(accountId)
                 Toast.makeText(view.context, "Account deleted successfully!", Toast.LENGTH_SHORT).show()
                 val myIntent = Intent(view.context, MainActivity::class.java)
                 startActivity(myIntent)

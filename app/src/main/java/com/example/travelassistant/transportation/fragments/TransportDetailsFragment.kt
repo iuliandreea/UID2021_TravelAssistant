@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.travelassistant.R
@@ -78,6 +80,14 @@ class TransportDetailsFragment : Fragment(), OnMapReadyCallback  {
             }
         })
 
+        val btn: Button = view.findViewById(R.id.signOutButton)
+        btn.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("from", from)
+            bundle.putString("to", to)
+            view.findNavController().navigate(R.id.transportFragment, bundle)
+        }
+
         /*
         Button btn = (Button) findViewById(R.id.btn_clickme);
         btn.setOnClickListener(new OnClickListener() {
@@ -95,6 +105,7 @@ class TransportDetailsFragment : Fragment(), OnMapReadyCallback  {
     private fun filterDataSource(): ArrayList<Transport> {
         var dataSource = data.stream().filter {
             it.price <= price && it.from.lowercase() == from.lowercase() && it.to.lowercase() == to.lowercase()
+                    && it.type.lowercase() == type.lowercase()
         }.collect(Collectors.toList())
         var dataArrayList = arrayListOf<Transport>()
         dataArrayList.addAll(dataSource)

@@ -71,6 +71,11 @@ class TransportFragment : Fragment() {
                 bundle.putString("type", type)
                 view.findNavController().navigate(R.id.transportDetailsFragment, bundle)
             }
+
+            val btn: Button = view.findViewById(R.id.signOutButton)
+            btn.setOnClickListener {
+                view.findNavController().navigate(R.id.exploreFragment)
+            }
         }
 
         return view

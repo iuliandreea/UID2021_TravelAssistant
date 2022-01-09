@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.findNavController
 import com.example.travelassistant.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -24,7 +26,16 @@ class TripOrganizationFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_trip_organization, container, false)
+        val view = inflater.inflate(R.layout.activity_trip_organization, container, false)
+
+        val btn: Button = view.findViewById(R.id.signOutButton)
+        btn.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putInt("accountId", arguments?.getInt("accountId")!!)
+            view.findNavController().navigate(R.id.profileFragment, bundle)
+        }
+
+        return view
     }
 
     companion object {

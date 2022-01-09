@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import androidx.navigation.findNavController
@@ -54,7 +55,9 @@ class TripsFragment : Fragment() {
             parisImageView.setOnClickListener {
 //            val intent = Intent(view.context, RateTripActivity::class.java)
 //            startActivity(intent)
-                view.findNavController().navigate(R.id.rateTripFragment)
+                val bundle = Bundle()
+                bundle.putInt("accountId", accountId)
+                view.findNavController().navigate(R.id.rateTripFragment, bundle)
             }
         }
         else {

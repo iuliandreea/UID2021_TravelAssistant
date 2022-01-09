@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.travelassistant.R
@@ -77,6 +78,11 @@ class VisitFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(activity);
         btSearch.setOnClickListener {
             recyclerView.visibility = View.VISIBLE
+        }
+
+        val btn: Button = views.findViewById(R.id.signOutButton)
+        btn.setOnClickListener {
+            views.findNavController().navigate(R.id.exploreFragment)
         }
         return views
 
