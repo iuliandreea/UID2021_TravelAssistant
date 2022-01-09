@@ -8,10 +8,7 @@ import android.view.View
 import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.Button
-<<<<<<< HEAD
 import android.widget.EditText
-=======
->>>>>>> 5f9e7f6636bbbac2da9109fb66809ca1f0cf64a1
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
@@ -52,7 +49,6 @@ class ExploreFragment : Fragment() {
 
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-<<<<<<< HEAD
         val view = inflater.inflate(R.layout.fragment_explore, container, false)
 
         val args: ExploreFragmentArgs by navArgs()
@@ -99,7 +95,6 @@ class ExploreFragment : Fragment() {
         }
 
         return valid
-=======
         val views = inflater.inflate(R.layout.fragment_explore, container, false)
         val findViewById = views.findViewById<Button>(R.id.button2)
         findViewById?.setOnClickListener(object : View.OnClickListener {
@@ -112,7 +107,6 @@ class ExploreFragment : Fragment() {
         })
 //        // Inflate the layout for this fragment
         return views
->>>>>>> 5f9e7f6636bbbac2da9109fb66809ca1f0cf64a1
     }
 
 
