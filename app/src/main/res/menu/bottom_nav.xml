@@ -5,6 +5,10 @@
         android:icon="@drawable/explore_button"
         android:title="Explore" />
     <item
+        android:id="@+id/presetsFragment"
+        android:icon="@drawable/auto_gen"
+        android:title="Our Ideas"/>
+    <item
         android:id="@+id/tripsFragment"
         android:icon="@drawable/my_trips_button"
         android:title="My trips" />

@@ -5,11 +5,19 @@ import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.util.Log
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment.findNavController
+import androidx.navigation.fragment.navArgs
+import com.example.travelassistant.profile_management.fragments.EditProfileFragment
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -28,31 +36,60 @@ class ExploreFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    private lateinit var from: EditText
+    private lateinit var to: EditText
 
-    }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-    override fun onCreateView(
+        val view = inflater.inflate(R.layout.fragment_explore, container, false)
 
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val views = inflater.inflate(R.layout.fragment_explore, container, false)
-        val visitBtn = views.findViewById<Button>(R.id.button4)
-        visitBtn.setOnClickListener {
-            if (validateInput(views)) {
-                views.findNavController().navigate(R.id.visitFragment)
+        val args: ExploreFragmentArgs by navArgs()
+        Log.println(Log.ERROR, "HELLO", args.toString())
+        val accountId = args.accountId
+        Log.println(Log.ERROR, "ACCOUNTID", accountId.toString())
+
+        from = view.findViewById(R.id.yourLocationId)
+        to = view.findViewById(R.id.destinationId)
+
+        val transportButton: Button = view.findViewById(R.id.transportButton)
+        transportButton.setOnClickListener {
+            if (validateLocations(view)) {
+                val bundle = Bundle()
+                bundle.putString("from", from.text.toString())
+                bundle.putString("to", to.text.toString())
+                view.findNavController().navigate(R.id.transportFragment, bundle)
             }
         }
 
-        return views
-    }
+        val foodButton: Button = view.findViewById(R.id.foodButton)
+        foodButton.setOnClickListener {
+            if (validateLocations(view)) {
+                view.findNavController().navigate(R.id.foodFragment)
+            }
+        }
 
+        val accomodationBtn = view.findViewById<Button>(R.id.accommodationButton)
+        accomodationBtn.setOnClickListener {
+            if (validateInput(view)) {
+                view.findNavController().navigate(R.id.accommodationFragment)
+            }
+        }
+
+        val wardrobeBtn = view.findViewById<Button>(R.id.wardrobeButton)
+        wardrobeBtn.setOnClickListener {
+            if (validateInput(view)) {
+                view.findNavController().navigate(R.id.wardrobeFragment)
+            }
+        }
+
+        val visitBtn = view.findViewById<Button>(R.id.button4)
+        visitBtn.setOnClickListener {
+            if (validateInput(view)) {
+                views.findNavController().navigate(R.id.visitFragment)
+            }
+        }
+        return view
+    }
 
     fun displayErrorMessage(message: String) {
         val dialogClickListener =
@@ -72,10 +109,28 @@ class ExploreFragment : Fragment() {
             .show()
     }
 
+    private fun validateLocations(view: View): Boolean {
+        var valid = true
+
+        if (from.text.toString() == "") {
+            from.error = "Cannot be empty"
+            from.requestFocus()
+            valid = false
+        }
+
+        if (to.text.toString() == "") {
+            to.error = "Cannot be empty"
+            to.requestFocus()
+            valid = false
+        }
+
+        return valid
+    }
+
     fun validateInput(views: View): Boolean {
         val dateStr = views.findViewById<EditText>(R.id.checkIn)
         val dateStr1 = views.findViewById<EditText>(R.id.checkOut)
-        val destination = views.findViewById<EditText>(R.id.editTextTextPersonName2)
+        val destination = views.findViewById<EditText>(R.id.destinationId)
         val dest = destination.text.toString()
         if (dest.equals("Destination") || dest.trim().equals("")) {
 
@@ -83,12 +138,11 @@ class ExploreFragment : Fragment() {
 
         } else {
 
-            var formatter = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault())
+            /*var formatter = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault())
             try {
 
                 val date = formatter.parse(dateStr.text.toString())
                 if (dateStr.text.toString().length != 10) {
-
                     displayErrorMessage("Invalid date in")
 
                 } else {
@@ -113,30 +167,15 @@ class ExploreFragment : Fragment() {
                 displayErrorMessage("invalid date in")
 
             }
+                    }*/
+
+             /*catch (e: Exception) {
+                displayErrorMessage("invalid date in")
+
+            }*/
+            return true
 
         }
         return false
     }
-
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ExploreFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ExploreFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
-
 }
