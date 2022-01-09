@@ -1,4 +1,4 @@
-package com.example.travelassistant
+package com.example.travelassistant.wardrobe
 
 data class Weather(
     var id: Int,

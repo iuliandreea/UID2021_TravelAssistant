@@ -85,7 +85,7 @@ class ExploreFragment : Fragment() {
         val visitBtn = view.findViewById<Button>(R.id.button4)
         visitBtn.setOnClickListener {
             if (validateInput(view)) {
-                views.findNavController().navigate(R.id.visitFragment)
+                view.findNavController().navigate(R.id.visitFragment)
             }
         }
         return view

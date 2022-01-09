@@ -1,4 +1,4 @@
-package com.example.travelassistant
+package com.example.travelassistant.attraction
 
 import androidx.annotation.DrawableRes
 

@@ -81,7 +81,6 @@
     <string name="bus_str">Bus</string>
     <string name="car_str">Personal Car</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="back_str">Back</string>
 </resources>

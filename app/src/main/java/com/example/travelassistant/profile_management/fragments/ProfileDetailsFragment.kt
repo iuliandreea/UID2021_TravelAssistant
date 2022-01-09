@@ -75,7 +75,7 @@ class ProfileDetailsFragment : Fragment() {
             }
 
             currentTrip.setOnClickListener {
-                // add activity intent for current trip
+                view.findNavController().navigate(R.id.organizationFragment)
             }
 
             budget.setOnClickListener {

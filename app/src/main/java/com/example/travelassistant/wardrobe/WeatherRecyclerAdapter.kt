@@ -1,4 +1,4 @@
-package com.example.travelassistant
+package com.example.travelassistant.wardrobe
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.travelassistant.R
 
 class WeatherRecyclerAdapter(val context: Context?) : RecyclerView.Adapter<WeatherRecyclerAdapter.MyViewHolder>() {
     var weatherList: List<Weather> = listOf()

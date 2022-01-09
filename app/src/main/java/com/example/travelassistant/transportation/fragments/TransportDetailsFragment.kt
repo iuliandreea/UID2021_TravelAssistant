@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.travelassistant.R
@@ -42,16 +43,10 @@ class TransportDetailsFragment : Fragment(), OnMapReadyCallback  {
     private var price: Int = 0
     private lateinit var type: String
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.activity_transport_details, container, false)
+
+        view.findViewById<ImageView>(R.id.mapView).setImageResource(R.drawable.map)
 
         val args = arguments
         if(args != null) {

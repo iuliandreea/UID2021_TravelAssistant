@@ -47,7 +47,7 @@
         tools:layout="@layout/activity_profile_details" />
     <fragment
         android:id="@+id/visitFragment"
-        android:name="com.example.travelassistant.VisitFragment"
+        android:name="com.example.travelassistant.attraction.VisitFragment"
         android:label="fragment_visit"
         tools:layout="@layout/activity_profile_details" />
     <fragment
@@ -82,7 +82,7 @@
     </fragment>
     <fragment
         android:id="@+id/wardrobeFragment"
-        android:name="com.example.travelassistant.WardrobeFragment"
+        android:name="com.example.travelassistant.wardrobe.WardrobeFragment"
         android:label="fragment_wardrobe"
         tools:layout="@layout/fragment_wardrobe" />
 
@@ -91,5 +91,11 @@
         android:name="com.example.travelassistant.accommodation.AccommodationFragment"
         android:label="fragment_accommodation"
         tools:layout="@layout/fragment_accommodation" />
+
+    <fragment
+        android:id="@+id/organizationFragment"
+        android:name="com.example.travelassistant.organization.TripOrganizationFragment"
+        android:label="fragment_organization"
+        tools:layout="@layout/activity_trip_organization" />
 
 </navigation>

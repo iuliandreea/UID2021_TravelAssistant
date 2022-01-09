@@ -1,4 +1,4 @@
-package com.example.travelassistant
+package com.example.travelassistant.attraction
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.travelassistant.R
 
 class AttractionRecyclerAdapter(val context: Context?) :
     RecyclerView.Adapter<AttractionRecyclerAdapter.MyViewHolder>() {
