@@ -67,4 +67,18 @@
     <string name="help_str">Help Center</string>
     <string name="about_str">About Us</string>
 
+    <string name="transport_str">Transport</string>
+
+    <string name="price_str">Price Range</string>
+    <string name="your_loc_str">Your Location…</string>
+    <string name="dest_str">Destination…</string>
+
+    <string name="transport_type_str">Transport Type</string>
+    <string name="plane_str">Plane</string>
+    <string name="train_str">Train</string>
+    <string name="bus_str">Bus</string>
+    <string name="car_str">Personal Car</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

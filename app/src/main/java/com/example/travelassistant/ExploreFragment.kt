@@ -1,10 +1,21 @@
 package com.example.travelassistant
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.VISIBLE
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment.findNavController
+import androidx.navigation.fragment.navArgs
+import com.example.travelassistant.profile_management.fragments.EditProfileFragment
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +32,9 @@ class ExploreFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var from: EditText
+    private lateinit var to: EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -32,11 +46,54 @@ class ExploreFragment : Fragment() {
 
     override fun onCreateView(
 
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        val views = inflater.inflate(R.layout.fragment_explore, container, false)
-        return views
+        val view = inflater.inflate(R.layout.fragment_explore, container, false)
+
+        val args: ExploreFragmentArgs by navArgs()
+        Log.println(Log.ERROR, "HELLO", args.toString())
+        val accountId = args.accountId
+        Log.println(Log.ERROR, "ACCOUNTID", accountId.toString())
+
+        from = view.findViewById(R.id.yourLocationId)
+        to = view.findViewById(R.id.destinationId)
+
+        val transportButton: Button = view.findViewById(R.id.transportButton)
+        transportButton.setOnClickListener {
+            if (validateLocations(view)) {
+                val bundle = Bundle()
+                bundle.putString("from", from.text.toString())
+                bundle.putString("to", to.text.toString())
+                view.findNavController().navigate(R.id.transportFragment, bundle)
+            }
+        }
+
+        val foodButton: Button = view.findViewById(R.id.foodButton)
+        foodButton.setOnClickListener {
+            if (validateLocations(view)) {
+                view.findNavController().navigate(R.id.foodFragment)
+            }
+        }
+
+        return view
+    }
+
+    private fun validateLocations(view: View): Boolean {
+        var valid = true
+
+        if (from.text.toString() == "") {
+            from.error = "Cannot be empty"
+            from.requestFocus()
+            valid = false
+        }
+
+        if (to.text.toString() == "") {
+            to.error = "Cannot be empty"
+            to.requestFocus()
+            valid = false
+        }
+
+        return valid
     }
 
 
@@ -59,5 +116,6 @@ class ExploreFragment : Fragment() {
                 }
             }
     }
+
 
 }
