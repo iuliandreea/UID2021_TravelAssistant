@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/food_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/priceMaxRangeView"
+        app:layout_constraintTop_toBottomOf="@+id/signOutChip"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/priceMaxRangeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="85dp"
+        android:text="max range:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/foodText"
+        android:layout_width="142dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:text="Food"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/priceMinRangeView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.295" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/signOutChip"
+        android:layout_width="94dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="60dp"
+        android:text="Sign Out"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/foodText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/priceMinRangeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="10dp"
+        android:text="min range:"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodText"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/restaurantTypeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="Restaurant Type"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceMinRangeView" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="325dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantTypeView">
+
+        <RadioButton
+            android:id="@+id/fastFoodButton"
+            android:layout_width="365dp"
+            android:layout_height="wrap_content"
+            android:text="Fast Food" />
+
+        <RadioButton
+            android:id="@+id/casualDiningButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Casual Dining" />
+
+        <RadioButton
+            android:id="@+id/fineDiningButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fine Dining" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/searchRestaurantText"
+        android:layout_width="182dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Search Restaurants"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/restaurantRecyclerView"
+        android:layout_width="401dp"
+        android:layout_height="311dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchRestaurantText"
+        tools:listItem="@layout/card_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

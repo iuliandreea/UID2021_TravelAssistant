@@ -8,28 +8,52 @@
 
     <ImageView
         android:id="@+id/imageView2"
+<<<<<<< HEAD
         android:layout_width="442dp"
         android:layout_height="534dp"
+=======
+        android:layout_width="332dp"
+        android:layout_height="535dp"
+>>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
         android:layout_marginStart="27dp"
         android:layout_marginTop="276dp"
         android:layout_marginEnd="14dp"
         android:layout_marginBottom="51dp"
+<<<<<<< HEAD
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+=======
+        app:layout_constraintBottom_toTopOf="@+id/exploreButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.559"
+>>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
         app:srcCompat="@drawable/start_img" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="426dp"
         android:layout_height="60dp"
+<<<<<<< HEAD
         android:layout_marginTop="1dp"
         android:layout_marginBottom="8dp"
         android:text="Carries all the information you need while travelling."
         android:textAlignment="center"
         android:textSize="20sp"
+=======
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="8dp"
+        android:text="Carries all the information you need while travelling"
+        android:textAlignment="center"
+        android:textSize="16sp"
+>>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,12 +64,22 @@
         android:id="@+id/textView"
         android:layout_width="357dp"
         android:layout_height="38dp"
+<<<<<<< HEAD
         android:layout_marginTop="216dp"
         android:text="Your ultimate travel assistant. "
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
+=======
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="10dp"
+        android:text="Your ultimate travel assistant"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+>>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,14 +87,24 @@
         android:id="@+id/textView3"
         android:layout_width="413dp"
         android:layout_height="91dp"
+<<<<<<< HEAD
         android:layout_marginTop="66dp"
         android:layout_marginBottom="59dp"
         android:defaultFocusHighlightEnabled="true"
+=======
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="59dp"
+        android:defaultFocusHighlightEnabled="true"
+        android:fontFamily="sans-serif-light"
+>>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
         android:shadowColor="#FFFFFF"
         android:text="LET'S ORGANIZE YOUR BEST TRIP EVER"
         android:textAlignment="center"
         android:textColor="#03A9F4"
         android:textColorHighlight="#03D8F4"
+<<<<<<< HEAD
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,6 +134,42 @@
         app:backgroundTint="#FF66B2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button3"
+=======
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="150dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:text="Sign In"
+        android:textSize="12sp"
+        app:backgroundTint="@color/turquoise"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/exploreButton"
+        android:layout_width="150dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="40dp"
+        android:text="Let's Explore"
+        android:textSize="12sp"
+        app:backgroundTint="#FF66B2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/signInButton"
+>>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
