@@ -7,7 +7,7 @@
     tools:context=".ExploreFragment">
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/destination"
         android:layout_width="347dp"
         android:layout_height="41dp"
         android:layout_marginTop="24dp"
@@ -24,18 +24,18 @@
         android:layout_height="40dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:text="CheckIn"
+        android:text="DateIn"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/checkIn"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/destination" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="78dp"
         android:layout_height="40dp"
-        android:text="CheckOut"
+        android:text="DateOut"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/checkOut"
         app:layout_constraintHorizontal_bias="0.551"
@@ -53,7 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.564"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/destination" />
 
     <EditText
         android:id="@+id/checkOut"
