@@ -25,6 +25,11 @@
         android:name="com.example.travelassistant.profileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/wardrobeFragment"
+        android:name="com.example.travelassistant.WardrobeFragment"
+        android:label="fragment_wardrobe"
+        tools:layout="@layout/fragment_wardrobe" />
 
 
 </navigation>

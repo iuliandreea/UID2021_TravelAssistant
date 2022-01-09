@@ -2,7 +2,6 @@ package com.example.travelassistant
 
 import android.app.AlertDialog
 import android.content.DialogInterface
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -45,14 +45,13 @@ class ExploreFragment : Fragment() {
         val views = inflater.inflate(R.layout.fragment_explore, container, false)
         val findViewById = views.findViewById<Button>(R.id.button3)
 
-
-        findViewById?.setOnClickListener(object : View.OnClickListener {
-
-            override fun onClick(view: View?) {
-                val intent = Intent(context, WardrobeActivity::class.java)
-                validateInput(views, intent);
+        findViewById.setOnClickListener {
+            if (validateInput(views)) {
+                views.findNavController().navigate(R.id.wardrobeFragment)
             }
-        })
+        }
+
+        return views
 //        // Inflate the layout for this fragment
         return views
     }
@@ -95,7 +94,7 @@ class ExploreFragment : Fragment() {
             .show()
     }
 
-    fun validateInput(views: View, intent: Intent) {
+    fun validateInput(views: View): Boolean {
         val dateStr = views.findViewById<EditText>(R.id.checkIn)
         val dateStr1 = views.findViewById<EditText>(R.id.checkOut)
         val destination = views.findViewById<EditText>(R.id.destination)
@@ -125,16 +124,19 @@ class ExploreFragment : Fragment() {
                         try {
                             val date1 = formatter.parse(dateStr1.text.toString())
                             println(date1.toString())
-                            startActivity(intent)
+                            return true
                         } catch (e: Exception) {
                             displayErrorMessage("invalid date out")
+
                         }
                     }
                 }
             } catch (e: Exception) {
                 displayErrorMessage("invalid date in")
+
             }
 
         }
+        return false
     }
 }

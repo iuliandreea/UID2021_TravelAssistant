@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class WeatherRecyclerAdapter(val context: Context) : RecyclerView.Adapter<WeatherRecyclerAdapter.MyViewHolder>() {
+class WeatherRecyclerAdapter(val context: Context?) : RecyclerView.Adapter<WeatherRecyclerAdapter.MyViewHolder>() {
     var weatherList: List<Weather> = listOf()
 
     class MyViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
