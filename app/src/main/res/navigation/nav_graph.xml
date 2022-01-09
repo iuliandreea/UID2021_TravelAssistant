@@ -46,6 +46,11 @@
         android:label="fragment_profile"
         tools:layout="@layout/activity_profile_details" />
     <fragment
+        android:id="@+id/visitFragment"
+        android:name="com.example.travelassistant.VisitFragment"
+        android:label="fragment_visit"
+        tools:layout="@layout/activity_profile_details" />
+    <fragment
         android:id="@+id/editProfileFragment"
         android:name="com.example.travelassistant.profile_management.fragments.EditProfileFragment"
         android:label="fragment_edit_profile"

@@ -82,6 +82,12 @@ class ExploreFragment : Fragment() {
             }
         }
 
+        val visitBtn = view.findViewById<Button>(R.id.button4)
+        visitBtn.setOnClickListener {
+            if (validateInput(view)) {
+                views.findNavController().navigate(R.id.visitFragment)
+            }
+        }
         return view
     }
 
@@ -132,19 +138,12 @@ class ExploreFragment : Fragment() {
 
         } else {
 
-            var formatter = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault())
             /*var formatter = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault())
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
             try {
 
                 val date = formatter.parse(dateStr.text.toString())
                 if (dateStr.text.toString().length != 10) {
-
-<<<<<<< HEAD
                     displayErrorMessage("Invalid date in")
-=======
-                    // displayErrorMessage("Invalid date in")
->>>>>>> 15ca72cd568388a92f64388f4f137ffedb7f5fae
 
                 } else {
                     println(date.toString())
@@ -162,14 +161,12 @@ class ExploreFragment : Fragment() {
                             displayErrorMessage("invalid date out")
 
                         }
-<<<<<<< HEAD
                     }
                 }
             } catch (e: Exception) {
                 displayErrorMessage("invalid date in")
 
             }
-=======
                     }*/
 
              /*catch (e: Exception) {
