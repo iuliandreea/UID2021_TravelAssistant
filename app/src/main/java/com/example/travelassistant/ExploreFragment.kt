@@ -57,6 +57,7 @@ class ExploreFragment : Fragment() {
                 val bundle = Bundle()
                 bundle.putString("from", from.text.toString())
                 bundle.putString("to", to.text.toString())
+                bundle.putInt("accountId", accountId)
                 view.findNavController().navigate(R.id.transportFragment, bundle)
             }
         }

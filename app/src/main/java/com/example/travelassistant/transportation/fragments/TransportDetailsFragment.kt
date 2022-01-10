@@ -1,5 +1,7 @@
 package com.example.travelassistant.transportation.fragments
 
+import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -8,11 +10,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.travelassistant.R
+import com.example.travelassistant.favorites.favorite.FavoritesList
+import com.example.travelassistant.profile_management.SignInActivity
 import com.example.travelassistant.transportation.adapters.OnItemClickListener
+import com.example.travelassistant.transportation.adapters.OnItemLongClickListener
 import com.example.travelassistant.transportation.adapters.TransportViewAdapter
 import com.example.travelassistant.transportation.transport.Transport
 import com.example.travelassistant.transportation.transport.TransportList
@@ -45,6 +53,8 @@ class TransportDetailsFragment : Fragment(), OnMapReadyCallback  {
     private var price: Int = 0
     private lateinit var type: String
 
+    private var accountId: Int = -1
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.activity_transport_details, container, false)
 
@@ -56,6 +66,7 @@ class TransportDetailsFragment : Fragment(), OnMapReadyCallback  {
             from = args.getString("from", "")
             price = args.getInt("price")
             type = args.getString("type", "")
+            accountId = args.getInt("accountId")
         }
 
         Log.println(Log.ERROR, "to", to)
@@ -76,9 +87,28 @@ class TransportDetailsFragment : Fragment(), OnMapReadyCallback  {
 
         adapter.setOnItemClickListener(object : OnItemClickListener {
             override fun onItemClick(view: View, position: Int) {
-                // TODO
+                if (accountId == -1) {
+                    showErrorDialog(view)
+                }
+                else {
+                    showAddToTripDialog(view)
+                }
             }
         })
+
+        adapter.setOnItemLongClickListener(object : OnItemLongClickListener {
+            override fun onItemLongClick(view: View, position: Int): Boolean {
+                if (accountId == -1) {
+                    showErrorDialog(view)
+                }
+                else {
+                    showDialog(view)
+                }
+                return true
+            }
+
+        })
+
 
         val btn: Button = view.findViewById(R.id.signOutButton)
         btn.setOnClickListener {
@@ -100,6 +130,46 @@ class TransportDetailsFragment : Fragment(), OnMapReadyCallback  {
          */
 
         return view
+    }
+
+    private fun showDialog(view: View) {
+        val builder = AlertDialog.Builder(view.context)
+        builder.setTitle("Add to Favorites")
+            .setMessage("Would you like to add this transportation to favorites?")
+            .setPositiveButton("Yes", DialogInterface.OnClickListener { _, _ ->
+                Toast.makeText(view.context, "Transportation added to favorites", Toast.LENGTH_SHORT).show()
+            })
+            .setNegativeButton("No", DialogInterface.OnClickListener { dialog, _ ->
+                dialog.dismiss()
+            })
+        builder.create().show()
+    }
+
+    private fun showAddToTripDialog(view: View) {
+        val builder = AlertDialog.Builder(view.context)
+        builder.setTitle("Add to My Trip")
+            .setMessage("Would you like to add this transportation to your current trip?")
+            .setPositiveButton("Yes", DialogInterface.OnClickListener { _, _ ->
+                Toast.makeText(view.context, "Transportation added to My Trip", Toast.LENGTH_SHORT).show()
+            })
+            .setNegativeButton("No", DialogInterface.OnClickListener { dialog, _ ->
+                dialog.dismiss()
+            })
+        builder.create().show()
+    }
+
+    private fun showErrorDialog(view: View) {
+        val builder = AlertDialog.Builder(view.context)
+        builder.setTitle("Cannot add Trip")
+            .setMessage("Please Sign In in order to add to add the Trip")
+            .setPositiveButton("Sign In", DialogInterface.OnClickListener { _, _ ->
+                val myIntent = Intent(view.context, com.example.travelassistant.profile_management.activities.SignInActivity::class.java)
+                startActivity(myIntent)
+            })
+            .setNegativeButton("Dismiss", DialogInterface.OnClickListener { dialog, _ ->
+                dialog.dismiss()
+            })
+        builder.create().show()
     }
 
     private fun filterDataSource(): ArrayList<Transport> {

@@ -38,6 +38,8 @@ class TransportFragment : Fragment() {
     private var price: Int = 0
     private var type: String = ""
 
+    private var accountId: Int = -1
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.activity_transport, container, false)
 
@@ -45,6 +47,7 @@ class TransportFragment : Fragment() {
         if(args != null) {
             to = args.getString("to", "")
             from = args.getString("from", "")
+            accountId = args.getInt("accountId")
         }
 
         if(to != "" && from != "") {
@@ -69,6 +72,7 @@ class TransportFragment : Fragment() {
                 bundle.putString("to", to)
                 bundle.putInt("price", price)
                 bundle.putString("type", type)
+                bundle.putInt("accountId", accountId)
                 view.findNavController().navigate(R.id.transportDetailsFragment, bundle)
             }
 

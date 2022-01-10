@@ -20,13 +20,19 @@ class TransportViewAdapter(
         mListener = listener
     }
 
+    private lateinit var lListener: OnItemLongClickListener
+
+    fun setOnItemLongClickListener(listener: OnItemLongClickListener) {
+        lListener = listener
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransportViewHolder {
         val view = inflater.inflate(viewType, parent, false)
         return TransportViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: TransportViewHolder, position: Int) {
-        holder.bindData(dataSource[position], mListener)
+        holder.bindData(dataSource[position], mListener, lListener)
     }
 
     override fun getItemCount(): Int {
